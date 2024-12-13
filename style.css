@@ -218,7 +218,9 @@ section.creations button:hover {
 }
 
 .brand-desktop,
+.brand-mobile,
 .main-nav ul,
+.mobile-nav ul,
 footer h3,
 footer ul {
     cursor: pointer;
