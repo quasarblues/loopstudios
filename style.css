@@ -18,6 +18,10 @@ ul {
     list-style: none;
 }
 
+a:focus {
+    outline: none;
+}
+
 /* End CSS Reset */
 
 /* CSS Variables */
@@ -103,6 +107,10 @@ div.mobile-nav ul {
     font-family: var(--f-family-josefin);
     text-transform: uppercase;
     font-size: 1.5rem;
+}
+
+div.mobile-nav ul li {
+    position: relative;
 }
 
 h1 {
@@ -212,7 +220,7 @@ section.creations button:active {
     transform: scale(98%);
 }
 
-section.creations button:hover {
+section.creations button:active {
     background-color: var(--black);
     color: var(--white);
 }
@@ -297,11 +305,11 @@ h3::before {
     width: 75px;
 }
 
-.main-nav ul li:hover::before,
-footer ul li:hover::before,
-.social-links a:hover::before,
-p.brand-desktop:hover::before,
-h3:hover::before {
+.main-nav ul li:active::before,
+footer ul li:active::before,
+.social-links a:active::before,
+p.brand-desktop:active::before,
+h3:active::before {
     opacity: 1;
 }
 
@@ -310,19 +318,19 @@ footer ul li,
     position: relative;
 }
 
-section .creation:hover img {
+section .creation:active img {
     transition: opacity 0.3s ease;
 }
 
-section .creation:hover img {
+section .creation:active img {
     opacity: .30;
 }
 
-section .creation:hover p {
+section .creation:active p {
     color: var(--black);
 }
 
-section .creation:hover::before {
+section .creation:active::before {
     opacity: 0;
     visibility: none;
 }
@@ -373,47 +381,6 @@ section .creation:hover::before {
         max-width: 300px;
         transform: none;
     }
-
-    /* p.brand-desktop,
-    h3 {
-        position: relative;
-    }
-
-    .main-nav ul li::before,
-    footer ul li::before,
-    .social-links a::before,
-    p.brand-desktop::before,
-    h3::before {
-        content: '';
-        position: absolute;
-        bottom: -50%;
-        left: 50%;
-        height: 2px;
-        width: 30px;
-        transform: translateX(-50%);
-        background-color: var(--white);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    p.brand-desktop::before,
-    h3::before {
-        bottom: -30%;
-        width: 75px;
-    }
-
-    .main-nav ul li:hover::before,
-    footer ul li:hover::before,
-    .social-links a:hover::before,
-    p.brand-desktop:hover::before,
-    h3:hover::before {
-        opacity: 1;
-    }
-
-    footer ul li,
-    .social-links a {
-        position: relative;
-    } */
 
     main {
         display: flex;
@@ -487,23 +454,6 @@ section .creation:hover::before {
         font-size: 1.5rem;
         transition: color 0.3s ease;
     }
-
-    /* section .creation:hover img {
-        transition: opacity 0.3s ease;
-    }
-
-    section .creation:hover img {
-        opacity: .30;
-    }
-
-    section .creation:hover p {
-        color: var(--black);
-    }
-
-    section .creation:hover::before {
-        opacity: 0;
-        visibility: none;
-    } */
 
     section.creations button {
         height: clamp(30px, 4vw, 50px);
