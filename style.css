@@ -118,7 +118,7 @@ div.mobile-nav ul li {
     position: relative;
 }
 
-h1 {
+p.hero-heading {
     border: 1px solid #fff;
     max-width: 275px;
     width: 90%;
@@ -146,6 +146,7 @@ section.about img {
     margin-bottom: 2rem;
 }
 
+h1,
 h2 {
     max-width: 90%;
     margin: 0 auto;
@@ -381,7 +382,7 @@ section .creation:active::before {
         font-weight: 400;
     }
 
-    h1 {
+    p.hero-heading {
         left: 9.5%;
         max-width: 300px;
         transform: none;
@@ -427,7 +428,7 @@ section .creation:active::before {
         font-size: 13px;
     }
 
-    section.about h2,
+    section.about h1,
     section.creations h2 {
         font-size: 2rem;
     }
@@ -536,7 +537,7 @@ section .creation:active::before {
         font-size: 15px;
     }
 
-    section.about h2,
+    section.about h1,
     section.creations h2 {
         font-size: clamp(1rem, 3vw, 3rem);
     }
