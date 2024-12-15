@@ -340,9 +340,9 @@ footer ul li,
     position: relative;
 }
 
-section .creation:active img {
+/* section .creation:active img {
     transition: opacity 0.3s ease;
-}
+} */
 
 section .creation:active img {
     opacity: .30;
