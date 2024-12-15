@@ -27,6 +27,15 @@ a {
     color: inherit;
 }
 
+button {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
 /* End CSS Reset */
 
 /* CSS Variables */
@@ -222,6 +231,7 @@ section.creations button {
     letter-spacing: 2px;
     text-transform: uppercase;
     background: none;
+    border: 1px solid var(--black);
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease-in, color 0.3s ease-in;
 }
