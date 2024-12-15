@@ -230,6 +230,7 @@ section.creations button {
     font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: var(--black);
     background: none;
     border: 1px solid var(--black);
     cursor: pointer;
