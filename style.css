@@ -280,7 +280,8 @@ div.social-links a {
 }
 
 .copyright {
-    color: var(--dk-grey)
+    color: var(--dk-grey);
+    text-align: right;
 }
 
 p.brand-desktop,
@@ -341,7 +342,7 @@ section .creation:active::before {
     visibility: none;
 }
 
-/* Larger Screens */
+/* Medium Screens */
 @media screen and (min-width: 800px) {
     .hero {
         display: flex;
@@ -493,10 +494,11 @@ section .creation:active::before {
     footer ul {
         flex-direction: row;
         row-gap: revert;
-        column-gap: 2rem;
+        column-gap: 1.3rem;
     }
 }
 
+/* For Large Screens */
 @media screen and (min-width: 1000px) {
     section.about {
         display: flex;
