@@ -46,6 +46,10 @@ a {
 
 body {
     min-height: 100vh;
+    /* Removes tap highlight */
+    -webkit-tap-highlight-color: transparent;
+    /* Optimizes touch interaction */
+    touch-action: manipulation;
 }
 
 .hero {
