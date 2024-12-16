@@ -241,7 +241,7 @@ section.creations button:active {
     transform: scale(98%);
 }
 
-section.creations button:active {
+section.creations button:hover {
     background-color: var(--black);
     color: var(--white);
 }
@@ -299,7 +299,7 @@ div.social-links a {
     text-align: right;
 }
 
-p.brand-desktop,
+.brand-desktop,
 h3 {
     position: relative;
 }
@@ -307,7 +307,7 @@ h3 {
 .main-nav ul li::before,
 footer ul li::before,
 .social-links a::before,
-p.brand-desktop::before,
+.brand-desktop::before,
 h3::before {
     content: '';
     position: absolute;
@@ -321,17 +321,17 @@ h3::before {
     transition: opacity 0.3s ease;
 }
 
-p.brand-desktop::before,
+.brand-desktop::before,
 h3::before {
     bottom: -30%;
     width: 75px;
 }
 
-.main-nav ul li:active::before,
-footer ul li:active::before,
-.social-links a:active::before,
-p.brand-desktop:active::before,
-h3:active::before {
+.main-nav ul li:hover::before,
+footer ul li:hover::before,
+.social-links a:hover::before,
+.brand-desktop:hover::before,
+h3:hover::before {
     opacity: 1;
 }
 
@@ -340,21 +340,54 @@ footer ul li,
     position: relative;
 }
 
-/* section .creation:active img {
+section .creation:hover img {
     transition: opacity 0.3s ease;
-} */
+}
 
-section .creation:active img {
+section .creation:hover img {
     opacity: .30;
 }
 
-section .creation:active p {
+section .creation:hover p {
     color: var(--black);
 }
 
-section .creation:active::before {
+section .creation:hover::before {
     opacity: 0;
     visibility: none;
+}
+
+/* Disable hover on devices that don't support hover (like mobile) */
+@media (hover: none) {
+    section.creations button:hover {
+        background-color: initial;
+        color: initial;
+    }
+
+    .main-nav ul li:hover::before,
+    footer ul li:hover::before,
+    .social-links a:hover::before,
+    .brand-desktop:hover::before,
+    h3:hover::before {
+        opacity: 0;
+    }
+
+    section .creation:hover img {
+        transition: none;
+    }
+
+    section .creation:hover img {
+        opacity: initial;
+    }
+
+    section .creation:hover p {
+        color: initial;
+    }
+
+    section .creation:hover::before {
+        opacity: initial;
+        visibility: initial;
+    }
 }
 
 /* Medium Screens */
