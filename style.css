@@ -381,7 +381,7 @@ section .creation:hover::before {
     }
 
     section .creation:hover p {
-        color: initial;
+        color: var(--white);
     }
 
     section .creation:hover::before {
