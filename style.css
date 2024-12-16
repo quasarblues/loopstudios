@@ -237,15 +237,6 @@ section.creations button {
     transition: transform 0.3s ease, background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
-section.creations button:active {
-    transform: scale(98%);
-}
-
-section.creations button:hover {
-    background-color: var(--black);
-    color: var(--white);
-}
-
 .brand-desktop,
 .brand-mobile,
 .main-nav ul,
@@ -327,41 +318,16 @@ h3::before {
     width: 75px;
 }
 
-.main-nav ul li:hover::before,
-footer ul li:hover::before,
-.social-links a:hover::before,
-.brand-desktop:hover::before,
-h3:hover::before {
-    opacity: 1;
-}
-
 footer ul li,
 .social-links a {
     position: relative;
 }
 
-section .creation:hover img {
-    transition: opacity 0.3s ease;
-}
-
-section .creation:hover img {
-    opacity: .30;
-}
-
-section .creation:hover p {
-    color: var(--black);
-}
-
-section .creation:hover::before {
-    opacity: 0;
-    visibility: none;
-}
-
-/* Disable hover on devices that don't support hover (like mobile) */
-@media (hover: none) {
+/* Set hover and active only on devices that support it */
+@media (hover: hover) and (pointer: fine) {
     section.creations button:hover {
-        background-color: initial;
-        color: initial;
+        background-color: var(--black);
+        color: var(--white);
     }
 
     .main-nav ul li:hover::before,
@@ -369,24 +335,26 @@ section .creation:hover::before {
     .social-links a:hover::before,
     .brand-desktop:hover::before,
     h3:hover::before {
-        opacity: 0;
+        opacity: 1;
     }
 
     section .creation:hover img {
-        transition: none;
-    }
-
-    section .creation:hover img {
-        opacity: initial;
+        opacity: .30;
+        transition: opacity 0.3s ease;
     }
 
     section .creation:hover p {
-        color: var(--white);
+        color: var(--black);
+        transition: color 0.3s ease;
     }
 
     section .creation:hover::before {
-        opacity: initial;
-        visibility: initial;
+        opacity: 0;
+        visibility: none;
+    }
+
+    section.creations button:active {
+        transform: scale(98%);
     }
 }
 
